@@ -26,6 +26,11 @@
                     text-decoration:none;
                 }
             }
+
+            .active {
+                color: $color-theme;
+                text-decoration:none;
+            }
         }
         
         .menu-icons {
@@ -55,6 +60,11 @@
                     background-color: $color-dark;
                     text-decoration: none;
                 }
+            }
+            .active {
+                color: $color-white;
+                background-color: $color-dark;
+                text-decoration: none;
             }
         }
     }

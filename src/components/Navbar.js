@@ -9,10 +9,10 @@ const navbar = () => {
         <div className="container">
             <img src={Logo} alt="" />
             <div className="menu-links">
-              <NavLink className="menu-link" to="/">Home</NavLink>
-              <NavLink className="menu-link" to="/categories">Categories</NavLink>
-              <NavLink className="menu-link" to="/products">Products</NavLink>
-              <NavLink className="menu-link" to="/contacts">Contacts</NavLink>
+              <NavLink className="menu-link" to="/" end>Home</NavLink>
+              <NavLink className="menu-link" to="/categories" end>Categories</NavLink>
+              <NavLink className="menu-link" to="/products" end>Products</NavLink>
+              <NavLink className="menu-link" to="/contacts" end>Contacts</NavLink>
             </div>
             <div className="menu-icons">
               <MenuIcon link="/search" icon="fa-regular fa-magnifying-glass" />

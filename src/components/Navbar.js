@@ -17,8 +17,8 @@ const navbar = () => {
             <div className="menu-icons">
               <MenuIcon link="/search" icon="fa-regular fa-magnifying-glass" />
               <MenuIcon link="/compare" icon="fa-light fa-code-compare fa-flip-vertical" />
-              <MenuIcon link="/wishlist" icon="fa-regular fa-heart" />
-              <MenuIcon link="/shoppingcart" icon="fa-regular fa-bag-shopping" />
+              <MenuIcon quantity={2} link="/wishlist" icon="fa-regular fa-heart" />
+              <MenuIcon quantity={3} link="/shoppingcart" icon="fa-regular fa-bag-shopping" />
             </div>
         </div>
     </nav>

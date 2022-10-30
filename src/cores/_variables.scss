@@ -6,3 +6,11 @@ $color-gray-2: #CDCED0;
 $color-gray-3: #BBBBBB;
 $color-brown: #75695C; 
 $color-dark: #222529;
+
+.bg-theme {
+    background-color: $color-theme;
+}
+
+.bg-dark {
+    background-color: $color-dark !important;
+}

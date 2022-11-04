@@ -1,5 +1,98 @@
 
 .__navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+
+    .container {
+        display:grid;
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "logo menuicons"
+                             "menulinks menulinks";
+
+        .logo {
+            grid-area: logo;
+        }
+        
+        .menu-links {
+            grid-area: menulinks;
+            display: grid;
+            height:100;
+            
+            
+            .menu-link{
+                color: $color-dark;
+                text-decoration: none;
+                margin: 15px 15px;
+
+                &:hover {
+                    color: $color-theme;
+                    text-decoration:none
+
+                }
+            }
+
+            .active {
+                color: $color-theme;
+                text-decoration:none;
+            }
+
+        
+        }
+        
+        .menu-icons {
+            grid-area: menuicons;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            
+            .menu-icon {
+                color: $color-dark;
+                text-decoration: none;
+                width: 36px;
+                height: 36px;
+                background-color: $color-white;
+                border-radius: 50%;
+                border: none;
+                box-shadow: 0 0 5px 0 $color-gray-3;
+                padding: 10px;
+                margin: 0.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position:relative;
+
+                &:hover {
+                    color: $color-white;
+                    background-color: $color-dark;
+                    text-decoration: none;
+
+                }
+            }
+            .active {
+                color: $color-white;
+                background-color: $color-dark;
+                text-decoration: none;
+            }
+            .btn-menu-icon {
+                color: $color-white;
+                background-color: $color-dark;
+                text-decoration: none;
+                box-shadow: 0 0 5px 0 $color-gray-3;
+            }
+
+            .hidden {
+                display:none;
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 992px) {
+.__navbar {
     height:100px;
     position: fixed;
     width: 100%;
@@ -15,6 +108,10 @@
         
         .menu-links {
             font-weight: 500;
+            display: flex;
+            height: 100%;
+            align-items: center;
+
             .menu-link{
                 color: $color-dark;
                 text-decoration: none;
@@ -69,6 +166,5 @@
             }
         }
     }
- 
 }
-
+}

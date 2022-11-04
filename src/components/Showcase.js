@@ -6,9 +6,9 @@ const Showcase = () => {
   return (
     <section className="__showcase">
         <div className="container-fluid">
-            <img className="fr-1" src={LeftImage} alt="" />
+            <img className="womanimg fr-1" src={LeftImage} alt="" />
             <div className="fr-1">mitten</div>
-            <img className="fr-1" src={RightImage} alt="" />
+            <img className="manimg fr-1" src={RightImage} alt="" />
         </div>
     </section>
   )

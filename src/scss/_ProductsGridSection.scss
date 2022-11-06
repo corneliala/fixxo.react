@@ -5,12 +5,20 @@
     border: none;
     border-radius: 0%;
 }
+
+.product-title h1 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+}
+
 .product-grid .card .card-background {
     position: absolute; 
     bottom:0;
     height: 0%;
     width: 100%;
-    background-color: $color-gray-2;
     transition: height 0.3s ease-in-out;
 }
 
@@ -23,9 +31,8 @@
     top: 77%;
 }
 
-.card-img-top {
-    height: 255px;
-    width: 255px;
+.card .card-img-top {
+    align-items: center;
     background-color: $color-gray-0;
 }
 

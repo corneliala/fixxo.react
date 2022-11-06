@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="__navbar">
         <div className="container">
             <img className="logo" src={Logo} alt="" />
-            <div className={`menu-links ${ !showMenu ? "d-none": "" }`}>
+            <div className={`menu-links ${ !showMenu ? "": "d-none" }`}>
               <NavLink className="menu-link" to="/" end>Home</NavLink>
               <NavLink className="menu-link" to="/categories" end>Categories</NavLink>
               <NavLink className="menu-link" to="/products" end>Products</NavLink>

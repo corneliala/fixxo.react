@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProductCard = () => {
+const ProductCard = ({product}) => {
   return (
 <div className="col">
     <div className="card">
@@ -9,14 +9,14 @@ const ProductCard = () => {
           <li><a href="#"><i className="fa-light fa-code-compare fa-flip-vertical"></i></a></li>
           <li><a href="#"><i className="fa-regular fa-bag-shopping "></i></a></li>
       </ul>
-      <img src="images/grey-img.svg" className="card-img-top" alt="..." />
+      <img src={product.img} className="card-img-top" alt={product.productName} />
       <div className="card-background">
           <a href="#" className="btn btn-theme">QUICK VIEW</a>
       </div>
     </div>
     <div className="product-description">
-      <p className="category">Category</p>
-      <h1 className="product-title">Modern Black Blouse</h1>
+      <p className="category">{product.category}</p>
+      <h1 className="product-title">{product.productName}</h1>
       <div className="product-rating">
           <i className="fa-solid fa-star"></i>
           <i className="fa-solid fa-star"></i>
@@ -24,7 +24,7 @@ const ProductCard = () => {
           <i className="fa-solid fa-star"></i>
           <i className="fa-solid fa-star"></i>
       </div>
-      <p className="price">$35.00</p>
+      <p className="price">{product.price}</p>
     </div>
   </div> 
   )

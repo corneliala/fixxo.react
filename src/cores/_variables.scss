@@ -19,6 +19,7 @@ $color-dark: #222529;
     position:relative;
     background-color: $color-theme;
     color: white; 
+    border: none;
     font-weight: 500;
     border-radius: 0%;
     padding: 1rem 2.5rem 1rem 2.5rem;
@@ -27,6 +28,7 @@ $color-dark: #222529;
     .btn-theme:hover {
         background-color: $color-dark;
         color:white;
+        border: none;
     }
 
 .btn-theme::before,

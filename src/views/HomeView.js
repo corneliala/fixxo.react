@@ -5,6 +5,7 @@ import FooterSection from '../components/FooterSection';
 import ProductGridSection from '../components/ProductGridSection';
 
 const HomeView = () => {
+  window.top.document.title ='Fixxo.'
   
   const [products, setProducts] = useState ([
     { id: 1, productName: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, img: "https://images.pexels.com/photos/47547/squirrel-animal-cute-rodents-47547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"},

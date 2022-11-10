@@ -5,7 +5,7 @@ import LetsBeImage from '../assets/images/lets-be-img.svg'
 function TopPicksSection() {
   return (
     <>
-    <section class="banners container">
+    <section className="banners container">
       <img src={PamelaImage} alt=""/>
       <img src={LetsBeImage} alt=""/>
     </section>

@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 
 const ContactFormSection = () => {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [comments, setComments] = useState ('')
     const [contactForm, setContactForm] = useState({name: '', email: '', comment: ''})
-    const [formErrors,setFormErrors] = useState({})
+    const [errors,setErrors] = useState({})
     const [submitted, setSubmitted] = useState(false)
 
     const validate = (values) => {
@@ -39,7 +42,43 @@ const ContactFormSection = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        setFormErrors(validate(contactForm))
+        setErrors(validate(contactForm))
+
+        if (errors.name === null && errors.email === null && errors.comments === null) {
+            let json = JSON.stringify({ name, email, comments})
+
+            setName('')
+            setEmail('')
+            setComments('')
+            setErrors({})
+
+            if (submitData('https://win22-webapi.azurewebsites.net/api/contactform', 'POST', json, )) {
+                setSubmitted (true)
+            } else {
+                setSubmitted (false)
+            }
+
+
+
+        } else {
+            setSubmitted(false)
+        }
+    }
+    const submitData = (url, method, data, contentType = 'application/json') => {
+        fetch(url, {
+            method: method,
+            headers: {
+                'Content-Type': contentType
+            },
+            body: data
+        })
+        .then (res => {
+            if (res.status ===200) {
+                return true
+            }
+
+            return false
+        })
     }
 
   return (
@@ -56,15 +95,15 @@ const ContactFormSection = () => {
                     <form onSubmit={handleSubmit} noValidate>
                     <div>
                         <input id="name" type="text" placeholder="Your Name" value={contactForm.name} onChange={handleChange} />
-                        <div className="errorMessage">{formErrors.name} </div>
+                        <div className="errorMessage">{errors.name} </div>
                     </div>
                     <div>
                         <input id="email" type="email" placeholder="Your Mail" value={contactForm.email} onChange={handleChange}/>
-                        <div className="errorMessage">{formErrors.email}</div>
+                        <div className="errorMessage">{errors.email}</div>
                     </div>
                     <div className="textarea">
                         <textarea id="comment" placeholder="Comments"value={contactForm.comment} onChange={handleChange}></textarea>
-                        <div className="errorMessage">{formErrors.comment}</div>
+                        <div className="errorMessage">{errors.comment}</div>
                     </div>
                     <div className="formbtn">
                         <button type="submit" className="btn-theme">Post Comments</button>

@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import BreadcrumbSection from '../components/BreadcrumbSection';
 import MapSection from '../components/MapSection';
 import ContactFormSection from '../components/ContactFormSection';
+import FooterSection from '../components/FooterSection';
 
 const ContactsView = () => {
   window.top.document.title= 'Contacts | Fixxo. '
@@ -13,6 +14,7 @@ const ContactsView = () => {
         <BreadcrumbSection currentPage="Contacts" />
         <MapSection />
         <ContactFormSection />
+        <FooterSection />
     </>
     
   )

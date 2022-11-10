@@ -7,7 +7,11 @@ const Showcase = () => {
     <section className="__showcase">
         <div className="container-fluid">
             <img className="womanimg fr-1" src={LeftImage} alt="" />
-            <div className="fr-1">mitten</div>
+            <div className="showcase-title fr-1">
+               <h1>SALE UP <span>TO 50% OFF</span></h1>
+               <p>Online shopping free home delivery over $100</p>
+               <a href="#" className="btn btn-theme">SHOP NOW</a>
+            </div>
             <img className="manimg fr-1" src={RightImage} alt="" />
         </div>
     </section>
